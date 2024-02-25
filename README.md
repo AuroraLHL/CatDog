@@ -1,6 +1,8 @@
 # README
 
-猫狗分类来源于Kaggle上的一个入门竞赛——[Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition)。
+猫狗分类来源于Kaggle上的一个入门竞赛——[Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition)。为了加深对CNN的理解，基于Pytorch复现了LeNet,AlexNet,ResNet等经典CNN模型，源代码放在GitHub上，[地址传送点击此处](https://github.com/AuroraLHL/CatDog/tree/master)。项目大纲如下：
+
+![猫狗分类](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402251608573.png)
 
 ## 一、问题描述
 
@@ -356,7 +358,7 @@ tensorboard --logdir runs
 
 ![截屏2022-04-30 上午12.12.36](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191620637.png)
 
-### 总结
+### 模型总结
 
 |          模型          | 测试集预测准确率 |
 | :--------------------: | :--------------: |
