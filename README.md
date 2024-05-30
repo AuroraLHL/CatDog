@@ -26,13 +26,13 @@
 
 结果如下：
 
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191557676.png" alt="截屏2022-04-20 下午1.54.15" style="zoom:50%;" />
+![截屏2022-04-20 下午1.54.15](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191557676.png)
 
 ### 2 抽取图片形成数据集
 
 由于一万多张图片比较多，并且需要将Cat类和Dog类的图片合在一起并重新命名，方便获得每张图片的labels,所以可以从原图片文件夹复制**任意给定数量图**片到**train**的文件夹，并且重命名如下：
 
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191557657.png" alt="截屏2022-04-22 下午3.58.33" style="zoom:1000%;" />
+![截屏2022-04-22 下午3.58.33](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191557657.png)
 
 程序为：`02_data_processing.py`.
 
@@ -110,7 +110,7 @@ torch.Size([3, 224, 224]) 0
 
 裁剪处理后图片如下所示，大小为**224X224**：
 
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191558149.png" alt="截屏2022-04-22 下午5.28.56" style="zoom:50%;" />
+![截屏2022-04-22 下午5.28.56](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191558149.png)
 
 ## 四、模型
 
@@ -127,7 +127,7 @@ torch.Size([3, 224, 224]) 0
 
 LeNet模型是一个早期用来识别手写数字图像的卷积神经网络，这个名字来源于LeNet论文的第一作者Yann LeCun。LeNet展示了通过梯度下降训练卷积神经网络可以达到手写数字识别在当时最先进的结果，LeNet模型结构图示如下所示：
 
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191614351.png" alt="截屏2022-04-29 下午7.54.44" style="zoom: 33%;" />
+![截屏2022-04-29 下午7.54.44](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191614351.png)
 
 由上图知，LeNet分为**卷积层块**和**全连接层块**两个部分，在本项目中我对LeNet模型做了**相应的调整**：
 
@@ -194,7 +194,7 @@ class LeNet(nn.Module):
 
 调用torchsummary库，可以观察模型的结构、参数：
 
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191614376.png" alt="截屏2022-04-30 上午12.35.15" style="zoom:50%;" />
+![截屏2022-04-30 上午12.35.15](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191614376.png)
 
 ### 2 AlexNet模型
 
@@ -244,11 +244,7 @@ python3 main.py
 tensorboard --logdir runs
 ```
 
-即可打开训练中的可视化界面，可以很方便的观察模型的效果：
-
-<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191615161.png" alt="截屏2022-04-30 上午8.28.37" style="zoom: 50%;" />
-
-如上图所示，可以非常方便的观察任意一个模型训练过程的效果！
+即可打开训练中的可视化界面，可以很方便的观察模型的效果。
 
 ## 六、不同模型训练结果分析
 
@@ -346,7 +342,7 @@ tensorboard --logdir runs
 
 在后面两个模型中，使用迁移学习的方法。
 
-> **迁移学习（Transfer Learning）**是机器学习中的一个名词，是指一种学习对另一种学习> 的影响，或习得的经验对完成其它活动的影响。迁移广泛存在于各种知识、技能与社会规范> 的学习中，将某个领域或任务上学习到的知识或模式应用到不同但相关的领域或问题中。``<img src="https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191620571.png" alt="截屏2022-04-29 下午11.58.32" style="zoom:70%;" />```
+> **迁移学习（Transfer Learning）**是机器学习中的一个名词，是指一种学习对另一种学习> 的影响，或习得的经验对完成其它活动的影响。迁移广泛存在于各种知识、技能与社会规范> 的学习中，将某个领域或任务上学习到的知识或模式应用到不同但相关的领域或问题中。``![截屏2022-04-29 下午11.58.32](https://aurora-pics.oss-cn-beijing.aliyuncs.com/Pic/202402191620571.png)```
 
 使用squeezeNet预训练模型，在迭代16个epoch后，准确率可以达到**93%**
 
